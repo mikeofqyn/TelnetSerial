@@ -4,7 +4,7 @@
  Reads from whichever has input, Serial first. Use with care, simultaneous
  inputs will get intermixed.
 
- See a more versatile telnet implemebtation at
+ See a more versatile telnet implementation at
               https://github.com/jandrassy/TelnetStream
 
  See also

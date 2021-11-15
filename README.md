@@ -1,6 +1,6 @@
  # A Serial+Telnet Class.
 
- Extends Print, writes to Serial and/or Telnet connection they are available
+ Extends Print, writes to Serial and/or Telnet connection when they are available
  Reads from whichever has input, Serial first. Use with care, simultaneous
  inputs will get intermixed.
 

@@ -4,6 +4,8 @@
  Reads from whichever has input, Serial first. Use with care, simultaneous
  inputs will get intermixed.
 
+Additional primitives provide command line parsing.
+
  See a more versatile telnet implementation at
               https://github.com/jandrassy/TelnetStream
 

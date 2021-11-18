@@ -1,0 +1,49 @@
+#######################################
+# Syntax Coloring Map For TelnetSerial
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+TelnetSerial	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+check_conn 	KEYWORD2
+check 	KEYWORD2
+portnum 	KEYWORD2
+begin 	KEYWORD2
+autocr 	KEYWORD2
+inputecho 	KEYWORD2
+inputecho	 	KEYWORD2
+crossecho 	KEYWORD2
+telnetsync 	KEYWORD2
+is_synced 	KEYWORD2
+
+write 	KEYWORD2
+flush	KEYWORD2
+read	KEYWORD2
+available	KEYWORD2
+peek	KEYWORD2
+
+cmd_set_timeout 	KEYWORD2
+cmd_init 	KEYWORD2
+send_error_message 	KEYWORD2
+
+cmd_in_progress	KEYWORD2
+cmd_available	KEYWORD2
+cmd_num_params	KEYWORD2
+cmd_verb	KEYWORD2
+cmd_equal	KEYWORD2
+
+cmd_param_str	KEYWORD2
+cmd_param_int	KEYWORD2
+cmd_param_double	KEYWORD2
+
+
+#######################################
+# Constants (LITERAL1)
+#######################################

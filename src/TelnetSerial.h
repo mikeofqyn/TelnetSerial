@@ -45,7 +45,7 @@ typedef enum {
 	TS_TELNET_IN
 } TelnetServer_input_t;
 
-class TelnetSerial : public Print {
+class TelnetSerial : public Stream {
 protected:
 	TelnetServer_         server;
 	WiFiClient            client;
@@ -86,7 +86,7 @@ public:
 	operator bool();                      // Allows use of 'if(TelnetSerialObject) ...' idiom
 	uint16_t portnum();                   // Return numbre of port to use
 	bool begin(long speed = 9600);        // for compatibility
-	void autocr(bool onoff);              // enable (true) or disable (false) auto CR con LF 
+	void autocr(bool onoff);              // enable (true) or disable (false) auto CR on LF 
 	void inputecho(bool onoff);           // enable (true) or disable (false) keystroke echo on al inputs
 	void inputecho(bool eser, bool etel); // enable (true) or disable (false) keystroke echo on serial and telnet
 	void crossecho(bool onoff);           // enable (true) or disable (false) keystroke echo on the other source (telnet<->Serial)
@@ -111,7 +111,7 @@ public:
 	// Command listener
 	//
 	void   cmd_set_timeout(unsigned long ms);          // Set input timeout                      
-	void   cmd_init(const char *prompt = NULL);              // Initialize for a new command line
+	void   cmd_init(const char *prompt = NULL);        // Initialize for a new command line
 	void   send_error_message(const char* message);    // Send an error message (just println it).
 	bool   cmd_in_progress();                          // User is currently typing a command
 

@@ -187,10 +187,12 @@ size_t TelnetSerial::write(uint8_t x) {
 		autocr_sent = false;
 		return 1;
 	}
-	if (Serial)
+	if (Serial) {
 		s = Serial.write(x);
-	if (check_conn())
+	}
+	if (check_conn()) {
 		s = client.write(x);
+	}
 	if (autocr_set && (x == '\n')) {
 		this->write('\r');
 		autocr_sent = true;
@@ -207,10 +209,12 @@ size_t TelnetSerial::write(uint8_t x) {
 */
 size_t TelnetSerial::write(char* x) {
 	size_t s = 0;
-	if (Serial)
+	if (Serial) {
 		s = Serial.write(x);
-	if (check_conn())
+	}
+	if (check_conn()) {
 		s = client.write(x);
+	}
 	return s;
 }
 
@@ -220,11 +224,12 @@ size_t TelnetSerial::write(char* x) {
 */
 size_t TelnetSerial::write(uint8_t* x, size_t sz) {
 	size_t s = 0;
-	if (Serial)
+	if (Serial) {
 		s = Serial.write(x, sz);
-	if (check_conn())
+	}
+	if (check_conn()) {
 		s = client.write(x, sz);
-
+	}
 	return s;
 }
 
@@ -233,10 +238,12 @@ size_t TelnetSerial::write(uint8_t* x, size_t sz) {
  *
  */
 void TelnetSerial::flush() {
-	if (Serial)
+	if (Serial) {
 		Serial.flush();
-	if (check_conn())
+	}
+	if (check_conn()) {
 		client.flush();
+	}
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
